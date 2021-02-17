@@ -109,7 +109,7 @@ ApplicationWindow{
                 let nom='Mes '+app.arrMeses[app.cNumMes - 1]+' '+app.arrDates[v].getFullYear()+' '+app.arrSignos[v]
                 info.text+='Creando pronosticos del mes : '+nom+'\n'
 
-                let cmd2='wine /home/ns/zodiacserver/bin/zodiac_server.exe '+(nom).replace(/ /g, '_')+' '+app.arrDates[v].getFullYear()+' '+parseInt(app.arrDates[v].getMonth()+1)+' '+app.arrDates[v].getDate()+' '+app.arrDates[v].getHours()+' '+app.arrDates[v].getMinutes()+' 0 0.0 0.0 Centro /home/ns/temp-screenshots/'+(nom).replace(/ /g, '_')+'.json '+ms+' 3 "/home/ns/temp-screenshots/cap_'+ms+'.png" 2560x1440 2560x1440'
+                let cmd2='wine /home/ns/zodiacserver/bin/zodiac_server.exe '+(nom).replace(/ /g, '_')+' '+app.arrDates[v].getFullYear()+' '+parseInt(app.arrDates[v].getMonth()+1)+' '+app.arrDates[v].getDate()+' '+app.arrDates[v].getHours()+' '+app.arrDates[v].getMinutes()+' 0 0.0 0.0 Centro /home/ns/temp-screenshots/'+ms+'.json '+ms+' 3 "/home/ns/temp-screenshots/cap_'+ms+'.png" 2560x1440 2560x1440'
                 unik.run(cmd2)
                 v++
             }else{
