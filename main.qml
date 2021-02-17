@@ -99,7 +99,7 @@ ApplicationWindow{
             if(v<12){
                 let d=new Date(Date.now())
                 let ms=d.getTime()
-                let nom='Mes '+app.arrMeses[app.cNumMes]+' '+app.arrDates[v].getFullYear()+' '+app.arrSignos[v]
+                let nom='Mes '+app.arrMeses[app.cNumMes - 1]+' '+app.arrDates[v].getFullYear()+' '+app.arrSignos[v]
                 info.text+='Creando pronosticos del mes : '+nom+'\n'
 
                 let cmd2='wine /home/ns/zodiacserver/bin/zodiac_server.exe '+(nom).replace(/ /g, '_')+' '+app.arrDates[v].getFullYear()+' '+parseInt(app.arrDates[v].getMonth()+1)+' '+app.arrDates[v].getDate()+' '+app.arrDates[v].getHours()+' '+app.arrDates[v].getMinutes()+' 0 0.0 0.0 Centro /home/ns/temp-screenshots/'+(nom).replace(/ /g, '_')+'.json '+ms+' 3 "/home/ns/temp-screenshots/cap_'+ms+'.png" 2560x1440 2560x1440'
