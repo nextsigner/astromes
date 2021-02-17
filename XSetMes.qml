@@ -13,7 +13,7 @@ Item {
             font.pixelSize: app.fs*2
             color: app.c2
         }
-        Item{width: 2; height: app.fs*3}
+        Item{width: 2; height: app.fs*2}
         Text{
             text: '<b>Seleccionar Mes y Año</b>'
             font.pixelSize: app.fs

@@ -47,7 +47,7 @@ ApplicationWindow{
         info.text+=s
         arrDates.push(d1)
         if(arrDates.length===12){
-            info.text+='Finalizado\n'
+            info.text+='Comenzando creación con ZodiacSever...\n'
             tMkZodiac.start()
         }
     }
@@ -79,13 +79,20 @@ ApplicationWindow{
                 height: xApp.height
                 color: app.c2
             }
-            TextArea{
-                id: info
-                font.pixelSize: 30
+            Flickable{
+                id: flick
                 width: xApp.width*0.5
-                height: xApp.height
-                color: app.c2
-                onTextChanged:  cursorPosition = length-1
+                height: xApp.height-app.fs
+                contentHeight: info.contentHeight
+                clip: true
+                TextArea{
+                    id: info
+                    font.pixelSize: 30
+                    width: xApp.width*0.5
+                    //height: xApp.height-app.fs
+                    color: app.c2
+                    onTextChanged: flick.contentY=info.contentHeight-xApp.height+app.fs
+                }
             }
         }
     }
