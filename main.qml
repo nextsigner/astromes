@@ -114,6 +114,8 @@ ApplicationWindow{
                 v++
             }else{
                 setMes.bot.enabled=true
+                app.stringHoraDeInicio=''
+                app.arrDates=[]
                 stop()
             }
         }
